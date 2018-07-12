@@ -1,0 +1,229 @@
+/*--------------------------------------------------------------
+## main-nav
+--------------------------------------------------------------*/
+
+.main-navigation {
+  position: absolute;
+  width: 70%;
+  text-transform: uppercase;
+  @include respond(tablet-land) {
+    width: 100%;
+    position: relative;
+    padding: 0 2rem;
+  }
+  @include respond(desktop) {
+    padding: 0;
+  }
+  &-bar {
+    transition: all 250ms ease-in;
+    @include respond(desktop) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 4rem;
+    }
+  }
+
+  &.toggled {
+    .nav-menu {
+      visibility: visible;
+      left: 0;
+      opacity: 1;
+    }
+    .menu-toggle {
+      left: 80%;
+    }
+  }
+
+  .nav-menu {
+    position: absolute;
+    visibility: hidden;
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+    min-height: 100vh;
+    width: 100%;
+    top: 0;
+    left: -100%;
+    opacity: 0.5;
+    transition: all 300ms ease-in;
+    background-color: $color__background-body;
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    @include respond(tablet-land) {
+      position: relative;
+      visibility: visible;
+      left: 0;
+      min-height: unset;
+      box-shadow: none;
+      display: flex;
+      align-items: center;
+      opacity: 1;
+      font-size: 0.85rem;
+      padding: 0.5rem;
+    }
+  }
+
+  .menu-item {
+    display: block;
+    width: 65%;
+    line-height: 1;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 300ms ease-in;
+    @include respond(tablet-land) {
+      width: auto;
+    }
+    &:hover {
+      border-bottom: 2px solid $color-palette4;
+    }
+    a {
+      display: block;
+      padding: 0.75rem;
+      &:visited,
+      &:hover {
+        text-decoration: none;
+        color: $color__text-main;
+      }
+    }
+  }
+
+  .current-menu-item {
+    border-bottom: 2px solid $color-palette4;
+  }
+
+  /* Small menu. */
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.25rem 0.5rem;
+    border: none;
+    background-color: $color-palette1;
+    transition: all 300ms ease-in;
+    z-index: 101;
+    @include respond(tablet-land) {
+      display: none;
+    }
+    &:hover {
+    }
+  }
+}
+
+.main-navigation-social-bar {
+  display: none;
+  @include respond(desktop) {
+    display: block;
+  }
+
+  .social-bar__list {
+    flex-wrap: nowrap;
+  }
+}
+
+.sticky-navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  background-color: $color__background-body;
+  box-shadow: 0 0.15rem 0.25rem $color__text-dimmed;
+  z-index: 99;
+  .social-bar__list {
+    padding: 0;
+  }
+}
+
+/*--------------------------------------------------------------
+## Footer nav
+--------------------------------------------------------------*/
+.menu-footer-menu-container {
+}
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  list-style: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  flex-wrap: wrap;
+  margin: 0 0 1rem;
+  padding: 0.5rem 1rem;
+  .menu-item {
+    margin: 0.25rem;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    a {
+      color: $color__text-main;
+      white-space: nowrap;
+      &:hover,
+      &:visited {
+        color: $color__text-main;
+      }
+    }
+  }
+}
+
+.comment-navigation,
+.posts-navigation,
+.post-navigation {
+  .site-main & {
+    margin: 0 0 1.5em;
+    overflow: hidden;
+  }
+
+  .nav-previous,
+  .nav-next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.25rem 0;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.15rem;
+    @include respond(tablet-land) {
+      margin: 0.25rem;
+      float: left;
+      width: 45%;
+    }
+    a {
+      display: block;
+      height: 100%;
+      width: 100%;
+      min-height: 8rem;
+      padding: 1rem;
+      border: 3px solid transparent;
+      color: $color__text-main;
+      background-color: $color__background-colored;
+      transition: border 200ms ease-in, background-color 125ms ease-in;
+
+      &:hover {
+        border: 3px solid $color-palette1;
+        background-color: transparent;
+        text-decoration: none;
+      }
+    }
+    .post-navigation__ind {
+      font-size: 0.85rem;
+      display: block;
+      color: $color-palette1;
+    }
+  }
+
+  .nav-previous {
+    width: 100%;
+    @include respond(tablet-land) {
+      float: left;
+      width: 45%;
+    }
+  }
+
+  .nav-next {
+    width: 100%;
+    text-align: right;
+    @include respond(tablet-land) {
+      float: right;
+      width: 45%;
+    }
+  }
+}

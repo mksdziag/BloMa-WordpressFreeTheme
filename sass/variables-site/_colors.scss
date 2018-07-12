@@ -1,0 +1,35 @@
+$color-palette1: #0e8183;
+$color-palette3: #ee4b6a;
+$color-palette2: #ef8354;
+$color-palette4: #df3b57;
+
+$color__text-main: #505050;
+$color__text-dimmed: transparentize($color__text-main, 0.5);
+
+$color__link: darken($color__text-main, 6.5%);
+$color__link-visited: $color__link;
+$color__link-hover: $color-palette1;
+
+$color__background-button: $color-palette1;
+$color__background-colored: transparentize($color-palette1, 0.85);
+
+$color__border-gray: transparentize($color__text-main, 0.925);
+$color__border-colored: transparentize($color-palette1, 0.75);
+
+$color__background-input: #f8f8f8;
+
+$color__background-body: #fff;
+$color__background-screen: #f1f1f1;
+$color__background-hr: #ccc;
+$color__background-pre: #eee;
+$color__background-ins: $color-palette2;
+
+$color__text-screen: #21759b;
+$color__text-input: #646464;
+$color__text-input-focus: #111;
+
+$color__border-button: #ccc #ccc #bbb;
+$color__border-button-hover: #ccc #bbb #aaa;
+$color__border-button-focus: #aaa #bbb #bbb;
+$color__border-input: #ccc;
+$color__border-abbr: #666;

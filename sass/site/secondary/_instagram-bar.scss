@@ -1,0 +1,55 @@
+.instagram-bar {
+  &__wrapper {
+    min-height: 250px;
+    margin-bottom: 1rem;
+    @include respond(desktop) {
+      min-height: 250px;
+    }
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+  &__list-item {
+    position: relative;
+    display: block;
+    flex: 1;
+    flex-basis: 100%;
+    min-height: 250px;
+    height: 100%;
+    margin: 3px;
+    overflow: hidden;
+
+    @include respond(tablet) {
+      flex-basis: calc(50% - 6px);
+    }
+    @include respond(tablet-land) {
+      flex-basis: 25%;
+      &:nth-child(7) {
+        display: none;
+      }
+      &:nth-child(8) {
+        display: none;
+      }
+    }
+    @include respond(desktop) {
+      flex-basis: 12.5%;
+    }
+  }
+  &__link {
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    transition: transform 250ms ease-in-out;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

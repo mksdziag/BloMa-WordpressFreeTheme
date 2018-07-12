@@ -1,0 +1,51 @@
+.sticky {
+  display: block;
+  border: 2px solid $color__border-gray;
+  box-shadow: 0 1rem 1.5rem $color__border-gray;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.hentry {
+  margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+  display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+  margin: 1rem 0 2rem;
+}
+
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.page-title {
+  text-transform: uppercase;
+  font-family: $font__secondary;
+}
+
+.archive-description {
+  font-style: italic;
+  color: $color__text-dimmed;
+}
+
+a.read-more__link--archive {
+  font-size: 1.25rem;
+  color: $color-palette1;
+  text-transform: uppercase;
+}
+
+.post {
+  margin-bottom: 4rem;
+}

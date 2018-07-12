@@ -1,0 +1,23 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  padding: 0.5rem;
+  @include font-size(0.75);
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background: $color__background-button;
+  color: $color__background-body;
+  transition: background-color 150ms ease-in, color 150ms ease-in;
+  cursor: pointer;
+  &:hover {
+    background-color: $color__text-main;
+  }
+  &:active,
+  &:focus {
+    background-color: $color__text-main;
+  }
+}

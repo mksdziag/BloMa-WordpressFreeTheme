@@ -1,0 +1,57 @@
+.site {
+  &-header {
+    @include respond(tablet-land) {
+      padding: 1rem 0;
+    }
+  }
+
+  &-branding {
+    padding: 3rem 0;
+    margin-bottom: 1rem;
+    @include respond(tablet-land) {
+      padding: 4rem 0;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &-title {
+    position: relative;
+    width: 80%;
+    padding: 1rem;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1;
+    font-family: $font__secondary;
+    text-transform: uppercase;
+    a {
+      color: $color__text-main;
+      &:hover {
+        color: unset;
+        text-decoration: none;
+      }
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 50%;
+      height: 5px;
+      width: 10%;
+      background-color: $color-palette1;
+      transform: translate(-50%, -50%);
+      transition: width 350ms ease-in, background-color 350ms ease-in;
+    }
+    &:hover::after {
+      width: 25%;
+      background-color: $color-palette4;
+    }
+  }
+
+  &-description {
+    margin: 0 auto;
+    text-align: center;
+    color: $color-palette1;
+  }
+}

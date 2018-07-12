@@ -1,0 +1,26 @@
+.social-bar {
+  &__wrapper {
+    background-color: transparent;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem;
+    margin: 0;
+    list-style: none;
+  }
+  &__list-item {
+    padding: 1rem;
+    font-size: 1.25rem;
+  }
+  &__link {
+    transition: color 150ms ease-in;
+    &:hover {
+      color: $color__link-hover;
+    }
+  }
+  &__icon {
+  }
+}

@@ -1,0 +1,11 @@
+a.read-more__link {
+  display: inline-block;
+  font-size: 1.15rem;
+  color: $color-palette1;
+
+  &:visited,
+  &:hover {
+    text-decoration: none;
+    color: $color__link-hover;
+  }
+}

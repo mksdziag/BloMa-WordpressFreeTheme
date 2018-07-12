@@ -1,0 +1,23 @@
+// ----- Responsive -----
+@mixin respond($breakpoint) {
+  @if $breakpoint==tablet {
+    @media screen and (min-width: 576px) {
+      @content;
+    }
+  }
+  @if $breakpoint==tablet-land {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakpoint==small-desktop {
+    @media screen and (min-width: 992px) {
+      @content;
+    }
+  }
+  @if $breakpoint==desktop {
+    @media screen and (min-width: 1200px) {
+      @content;
+    }
+  }
+}
