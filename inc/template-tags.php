@@ -58,7 +58,7 @@ if ( ! function_exists( 'bloma_categories' ) ) :
 	 */
 	function bloma_categories() {
 		/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'bloma' ) );
+			$categories_list = get_the_category_list( esc_html__( '| ', 'bloma' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
 				printf( '<span class="cat-links">' . esc_html__( '%1$s', 'bloma' ) . '</span>', $categories_list ); // WPCS: XSS OK.
@@ -236,6 +236,7 @@ if ( ! function_exists( 'bloma_socialbar' ) ) :
 		</div>
 		<?php }
 endif;
+
 if ( ! function_exists( 'bloma_instagram_bar' ) ) :
 	/**
 	 * Prints HTML with meta information for the current author.
@@ -247,28 +248,28 @@ if ( ! function_exists( 'bloma_instagram_bar' ) ) :
 		<div class="instagram-bar__wrapper">
 			<ul class="instagram-bar__list">
 				<li class="instagram-bar__list-item">
-					<a href="<?php echo $instagramLink ?>" target="_blank" class="instagram-bar__link" style="background-image: url('https://picsum.photos/500/500/?image=600')"></a>
+					<a href="<?php echo $instagramLink ?>" target="_blank" title="my instagram profile" alt="my instagram profile" class="instagram-bar__link" style="background-image: url('https://picsum.photos/500/500/?image=600')"></a>
 				</li>
 				<li class="instagram-bar__list-item">
-					<a href="https://<?php echo $instagramLink ?>" target="_blank" class="instagram-bar__link" style="background-image:url('https://picsum.photos/500/500/?image=611')"></a>
+					<a href="https://<?php echo $instagramLink ?>" target="_blank" title="my instagram profile" alt="my instagram profile" class="instagram-bar__link" style="background-image:url('https://picsum.photos/500/500/?image=611')"></a>
 				</li>
 				<li class="instagram-bar__list-item">
-					<a href="https://<?php echo $instagramLink ?>" target="_blank" class="instagram-bar__link" style="background-image:url('https://picsum.photos/500/500/?image=421')"></a>
+					<a href="https://<?php echo $instagramLink ?>" target="_blank" title="my instagram profile" alt="my instagram profile" class="instagram-bar__link" style="background-image:url('https://picsum.photos/500/500/?image=421')"></a>
 				</li>
 				<li class="instagram-bar__list-item">
-					<a href="https://<?php echo $instagramLink ?>" target="_blank" class="instagram-bar__link" style="background-image:url('https://picsum.photos/500/500/?image=343')"></a>
+					<a href="https://<?php echo $instagramLink ?>" target="_blank" title="my instagram profile" alt="my instagram profile" class="instagram-bar__link" style="background-image:url('https://picsum.photos/500/500/?image=343')"></a>
 				</li>
 				<li class="instagram-bar__list-item">
-					<a href="https://<?php echo $instagramLink ?>" target="_blank" class="instagram-bar__link" style="background-image:url('https://picsum.photos/500/500/?image=604')"></a>
+					<a href="https://<?php echo $instagramLink ?>" target="_blank" title="my instagram profile" alt="my instagram profile" class="instagram-bar__link" style="background-image:url('https://picsum.photos/500/500/?image=604')"></a>
 				</li>
 				<li class="instagram-bar__list-item">
-					<a href="https://<?php echo $instagramLink ?>" target="_blank" class="instagram-bar__link" style="background-image:url('https://picsum.photos/500/500/?image=615')"></a>
+					<a href="https://<?php echo $instagramLink ?>" target="_blank" title="my instagram profile" alt="my instagram profile" class="instagram-bar__link" style="background-image:url('https://picsum.photos/500/500/?image=615')"></a>
 				</li>
 				<li class="instagram-bar__list-item">
-					<a href="https://<?php echo $instagramLink ?>" target="_blank" class="instagram-bar__link" style="background-image:url('https://picsum.photos/500/500/?image=676')"></a>
+					<a href="https://<?php echo $instagramLink ?>" target="_blank" title="my instagram profile" alt="my instagram profile" class="instagram-bar__link" style="background-image:url('https://picsum.photos/500/500/?image=676')"></a>
 				</li>
 				<li class="instagram-bar__list-item">
-					<a href="https://<?php echo $instagramLink ?>" target="_blank" class="instagram-bar__link" style="background-image:url('https://picsum.photos/500/500/?image=427')"></a>
+					<a href="https://<?php echo $instagramLink ?>" target="_blank" title="my instagram profile" alt="my instagram profile" class="instagram-bar__link" style="background-image:url('https://picsum.photos/500/500/?image=427')"></a>
 				</li>
 				
 				
@@ -278,3 +279,4 @@ if ( ! function_exists( 'bloma_instagram_bar' ) ) :
 		
 		<?php }
 endif;
+

@@ -1,0 +1,59 @@
+.promo-bar {
+  margin-bottom: 5rem;
+  &__list {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    @include respond(tablet) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+    }
+  }
+  &__list-item {
+    height: 275px;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    display: block;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0.25rem 0.5rem;
+    @include respond(tablet) {
+      height: 350px;
+      margin: 0 3px;
+      &:nth-of-type(3) {
+        display: none;
+      }
+    }
+    @include respond(small-desktop) {
+      height: 400px;
+      &:nth-of-type(3) {
+        display: block;
+      }
+    }
+
+    .entry-header {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+    }
+    .entry-header__content {
+      margin-bottom: 0;
+    }
+    .entry-title {
+      color: $color__background-body;
+      text-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+      & a:hover {
+        color: $color__background-body;
+      }
+    }
+  }
+}

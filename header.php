@@ -63,4 +63,9 @@
 
 	</header><!-- #masthead -->
 
+			<!-- if its is homepage render promo bar -->
+	<?php if (is_home())  get_template_part( 'template-parts/promo', 'bar' ); ?>
+			<!-- end of promo bar -->
+	
+	
 	<div id="content" class="site-content wrapper">

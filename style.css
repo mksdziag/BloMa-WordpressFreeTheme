@@ -1934,6 +1934,95 @@ a.read-more__link:visited, a.read-more__link:hover {
 }
 
 /*--------------------------------------------------------------
+## Promo Bar
+--------------------------------------------------------------*/
+.promo-bar {
+  margin-bottom: 5rem;
+}
+
+.promo-bar__list {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 576px) {
+  .promo-bar__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-direction: row;
+        flex-direction: row;
+  }
+}
+
+.promo-bar__list-item {
+  height: 275px;
+  margin: 0;
+  padding: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: block;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  margin: 0.25rem 0.5rem;
+}
+
+@media screen and (min-width: 576px) {
+  .promo-bar__list-item {
+    height: 350px;
+    margin: 0 3px;
+  }
+  .promo-bar__list-item:nth-of-type(3) {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .promo-bar__list-item {
+    height: 400px;
+  }
+  .promo-bar__list-item:nth-of-type(3) {
+    display: block;
+  }
+}
+
+.promo-bar__list-item .entry-header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+}
+
+.promo-bar__list-item .entry-header__content {
+  margin-bottom: 0;
+}
+
+.promo-bar__list-item .entry-title {
+  color: #fff;
+  text-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.promo-bar__list-item .entry-title a:hover {
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
 # Infinite scroll
 --------------------------------------------------------------*/
 /* Globally hidden elements when Infinite Scroll is supported and in use. */

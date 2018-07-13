@@ -98,40 +98,40 @@
   }
 }
 
-#custom_html-2 {
-  margin-top: 6.5rem;
-  @include respond(small-desktop) {
-    margin-top: 0;
-  }
+// #custom_html-2 {
+//   margin-top: 6.5rem;
+//   @include respond(small-desktop) {
+//     margin-top: 0;
+//   }
 
-  .widget-title {
-    margin-top: 6.5rem;
-    margin-bottom: 0.5rem;
-  }
-  position: relative;
-  border: 3px solid $color-palette1;
-  border-radius: 3px;
-  .widget-about-me__content {
-    padding: 0.5rem 1rem;
-  }
-  .widget-about-me__image-wrapper {
-    max-width: 175px;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    overflow: hidden;
-    width: 60%;
-    box-shadow: 0 0.25rem 1.5rem $color__text-dimmed;
-  }
-  .widget-about-me__description {
-    font-style: italic;
-    color: $color__text-dimmed;
-    text-align: center;
-    font-size: 0.95rem;
-  }
-}
+//   .widget-title {
+//     margin-top: 6.5rem;
+//     margin-bottom: 0.5rem;
+//   }
+//   position: relative;
+//   border: 3px solid $color-palette1;
+//   border-radius: 3px;
+//   .widget-about-me__content {
+//     padding: 0.5rem 1rem;
+//   }
+//   .widget-about-me__image-wrapper {
+//     max-width: 175px;
+//     position: absolute;
+//     top: 0;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     border-radius: 50%;
+//     overflow: hidden;
+//     width: 60%;
+//     box-shadow: 0 0.25rem 1.5rem $color__text-dimmed;
+//   }
+//   .widget-about-me__description {
+//     font-style: italic;
+//     color: $color__text-dimmed;
+//     text-align: center;
+//     font-size: 0.95rem;
+//   }
+// }
 
 @import "bloma-social-bar";
 @import "instagram-bar";
