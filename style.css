@@ -1199,49 +1199,6 @@ a:hover, a:active {
   text-transform: none;
 }
 
-#custom_html-2 {
-  margin-top: 6.5rem;
-  position: relative;
-  border: 3px solid #0e8183;
-  border-radius: 3px;
-}
-
-@media screen and (min-width: 992px) {
-  #custom_html-2 {
-    margin-top: 0;
-  }
-}
-
-#custom_html-2 .widget-title {
-  margin-top: 6.5rem;
-  margin-bottom: 0.5rem;
-}
-
-#custom_html-2 .widget-about-me__content {
-  padding: 0.5rem 1rem;
-}
-
-#custom_html-2 .widget-about-me__image-wrapper {
-  max-width: 175px;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  border-radius: 50%;
-  overflow: hidden;
-  width: 60%;
-  -webkit-box-shadow: 0 0.25rem 1.5rem rgba(80, 80, 80, 0.5);
-          box-shadow: 0 0.25rem 1.5rem rgba(80, 80, 80, 0.5);
-}
-
-#custom_html-2 .widget-about-me__description {
-  font-style: italic;
-  color: rgba(80, 80, 80, 0.5);
-  text-align: center;
-  font-size: 0.95rem;
-}
-
 .social-bar__wrapper {
   background-color: transparent;
 }
