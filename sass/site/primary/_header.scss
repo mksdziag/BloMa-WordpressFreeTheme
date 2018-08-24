@@ -1,7 +1,7 @@
 .site {
   &-header {
     @include respond(tablet-land) {
-      padding: 1rem 0;
+      // padding: 1rem 0;
     }
   }
 
@@ -33,7 +33,7 @@
       }
     }
     &::after {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       left: 50%;

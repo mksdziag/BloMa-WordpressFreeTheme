@@ -4,23 +4,31 @@
 
 .main-navigation {
   position: absolute;
+  top: 0;
   width: 70%;
   text-transform: uppercase;
   @include respond(tablet-land) {
-    width: 100%;
     position: relative;
-    padding: 0 2rem;
+    width: 100%;
   }
-  @include respond(desktop) {
-    padding: 0;
-  }
+
   &-bar {
-    transition: all 250ms ease-in;
+    transition: top 250ms ease, left 250ms ease, transform 250ms ease;
+    background-color: $color__background-body;
+
+    @include respond(tablet-land) {
+      display: flex;
+      width: 100%;
+      padding: 0 2rem;
+      margin-bottom: 1rem;
+      border-top: 1px solid $color__border-gray;
+      border-bottom: 1px solid $color__border-gray;
+    }
     @include respond(desktop) {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 4rem;
+      padding: 0 2rem;
     }
   }
 
@@ -36,35 +44,37 @@
   }
 
   .nav-menu {
-    position: absolute;
+    position: fixed;
     visibility: hidden;
-    list-style: none;
+    height: 100vh;
+    width: 75%;
     margin: 0;
     padding: 1rem;
-    min-height: 100vh;
-    width: 100%;
     top: 0;
     left: -100%;
     opacity: 0.5;
+    list-style: none;
     transition: all 300ms ease-in;
     background-color: $color__background-body;
     box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.8);
-    z-index: 100;
+    z-index: 99;
     @include respond(tablet-land) {
+      width: 100%;
+      height: auto;
       position: relative;
       visibility: visible;
       left: 0;
-      min-height: unset;
-      box-shadow: none;
+      padding: 0.5rem;
       display: flex;
       align-items: center;
-      opacity: 1;
+      box-shadow: none;
       font-size: 0.85rem;
-      padding: 0.5rem;
+      opacity: 1;
     }
   }
 
   .menu-item {
+    position: relative;
     display: block;
     width: 65%;
     line-height: 1;
@@ -94,7 +104,7 @@
   /* Small menu. */
   .menu-toggle {
     display: block;
-    position: absolute;
+    position: fixed;
     top: 1rem;
     left: 1rem;
     padding: 0.25rem 0.5rem;
@@ -121,19 +131,16 @@
   }
 }
 
-.sticky-navbar {
+.sticky-nav {
   position: fixed;
   top: 0;
   width: 100%;
-  left: 0;
-  background-color: $color__background-body;
-  box-shadow: 0 0.15rem 0.25rem $color__text-dimmed;
   z-index: 99;
+  box-shadow: 0 0.15rem 0.25rem $color__text-dimmed;
   .social-bar__list {
     padding: 0;
   }
 }
-
 /*--------------------------------------------------------------
 ## Footer nav
 --------------------------------------------------------------*/

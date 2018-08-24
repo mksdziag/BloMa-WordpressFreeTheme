@@ -119,7 +119,7 @@ if ( ! function_exists( 'bloma_entry_footer' ) ) :
 					<a href="https://www.pinterest.com/pin/create/button/?url=<?php the_permalink( ); ?>&description=<?php the_title( ); ?>" target="_blank" class="share-bar__link fb-share-button"><i class="share-bar__icon icon-pinterest"></i></a>
 				</li>
 				<li class="share-bar__list-item">
-					<a href="https://facebook.com/sharer/sharer.php?u=<?php the_permalink( ); ?>" target="_blank" class="share-bar__link fb-share-button"><i class="share-bar__icon icon-facebook"></i></a>
+					<a href="https://facebook.com/sharer/sharer.php?u=<?php the_permalink( ); ?>" target="_blank" class="share-bar__link fb-share-button"><i class="share-bar__icon icon-facebook-squared"></i></a>
 				</li>
 			</ul>
 		</div>
@@ -224,7 +224,7 @@ if ( ! function_exists( 'bloma_socialbar' ) ) :
 				<?php } ?>
 			<?php  if (get_option('myFacebook')){ ?>
 				<li class="social-bar__list-item">
-					<a href="https://<?php echo get_option('myFacebook'); ?>" target="_blank" class="social-bar__link"><i class="social-bar__icon icon-facebook"></i></a>
+					<a href="https://<?php echo get_option('myFacebook'); ?>" target="_blank" class="social-bar__link"><i class="social-bar__icon icon-facebook-squared"></i></a>
 				</li>
 				<?php } ?>
 			<?php  if (get_option('myGooglePlus')){ ?>

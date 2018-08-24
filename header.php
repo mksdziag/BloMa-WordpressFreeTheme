@@ -29,21 +29,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bloma' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<div class="main-navigation-bar">
-			<nav id="site-navigation" class="main-navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><img class="hamburger" src="<?php echo get_theme_file_uri('./assets/images/if_menu-alt_134216.svg') ?>" alt=""></button>
-				<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-				'depth'          => 1,
-				) );
-				?>
-		</nav><!-- #site-navigation -->
-	<?php	bloma_socialbar('main-navigation-social-bar'); ?> 	<!-- Including bloma social bar widget -->
-	</div><!-- .main-navigation-bar -->
-		
-		<div class="site-branding">
+			<div class="site-branding">
 			<?php
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
@@ -61,7 +47,20 @@
 				<p class="site-description"><?php echo $bloma_description; /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
-
+		<div class="main-navigation-bar">
+			<nav id="site-navigation" class="main-navigation">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><img class="hamburger" src="<?php echo get_theme_file_uri('./assets/images/if_menu-alt_134216.svg') ?>" alt=""></button>
+				<?php
+			wp_nav_menu( array(
+				'theme_location' => 'menu-1',
+				'menu_id'        => 'primary-menu',
+				'depth'          => 1,
+				) );
+				?>
+		</nav><!-- #site-navigation -->
+		<?php	bloma_socialbar('main-navigation-social-bar'); ?> 	<!-- Including bloma social bar widget -->
+		</div><!-- .main-navigation-bar -->
+		
 	</header><!-- #masthead -->
 
 			<!-- if its is homepage render promo bar -->
