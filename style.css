@@ -1373,6 +1373,12 @@ a.read-more__link--archive {
   font-weight: 700;
   border-radius: 5px; }
 
+.comments-link {
+  font-size: 0.85rem;
+  color: rgba(80, 80, 80, 0.5); }
+  .comments-link a {
+    color: rgba(80, 80, 80, 0.5); }
+
 .share-bar__list {
   display: flex;
   justify-content: center;

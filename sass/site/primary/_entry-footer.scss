@@ -54,6 +54,14 @@
   border-radius: 5px;
 }
 
+.comments-link {
+  font-size: 0.85rem;
+  color: $color__text-dimmed;
+  a {
+    color: $color__text-dimmed;
+  }
+}
+
 .share-bar {
   &__list {
     display: flex;
